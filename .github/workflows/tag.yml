@@ -1,13 +1,16 @@
 on:
+  workflow_dispatch:
   release:
     types: [published, edited]
+
+permissions:
+  contents: write
+
 jobs:
   tag-major:
     name: Push major-release
     runs-on: ubuntu-latest
     steps:
       - uses: Actions-R-Us/actions-tagger@latest
-        env:
-          GITHUB_TOKEN: '${{ github.token }}'
         with:
           publish_latest_tag: false
