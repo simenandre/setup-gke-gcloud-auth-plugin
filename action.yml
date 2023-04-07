@@ -1,5 +1,8 @@
 name: setup-gke-gcloud-auth-plugin
 description: Installs gke-gcloud-auth-plugin
+branding:
+  icon: lock
+  color: green
 
 runs:
   using: composite
