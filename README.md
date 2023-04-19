@@ -1,4 +1,4 @@
-# `cobraz/setup-gke-gcloud-auth-plugin`
+# `simenandre/setup-gke-gcloud-auth-plugin`
 
 This GitHub Actions installs a pre-requisite for "gcloud container clusters get-credentials"
 command with a modern k8s client.
@@ -6,7 +6,7 @@ command with a modern k8s client.
 ## Quickstart
 
 ```yaml
-- uses: cobraz/setup-gke-gcloud-auth-plugin@v1
+- uses: simenandre/setup-gke-gcloud-auth-plugin@v1
 ```
 
 ### Example
@@ -35,7 +35,7 @@ jobs:
           credentials_json: ${{ secrets.GOOGLE_PROJECT_SA_KEY }}
           project_id: ${{ secrets.GOOGLE_PROJECT_ID }}
 
-      - uses: cobraz/setup-gke-gcloud-auth-plugin@v1
+      - uses: simenandre/setup-gke-gcloud-auth-plugin@v1
 
       - uses: google-github-actions/get-gke-credentials@v1
         with:
