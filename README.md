@@ -3,6 +3,11 @@
 This GitHub Actions installs a pre-requisite for "gcloud container clusters get-credentials"
 command with a modern k8s client.
 
+**Note**: This will probably eventually be added to one or more `google-github-actions`. It's
+currently unclear what will be the preferred and best way to add the auth plugin to your workflows,
+so I will be adding a notice/message to users of this action when that is clearer. If you have
+opinions and/or updates, please open an issue 🙌
+
 ## Quickstart
 
 ```yaml
