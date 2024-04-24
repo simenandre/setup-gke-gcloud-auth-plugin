@@ -70,7 +70,7 @@ Assuming this is your current setup using this plugin:
     location: europe-west1-b
 ```
 
-Migrating to get-gre-credentials can be done like so:
+Migrating to get-gke-credentials can be done like so:
 
 ```yaml
 - name: Authenticate to Google
