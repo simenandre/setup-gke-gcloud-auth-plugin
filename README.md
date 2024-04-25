@@ -5,11 +5,6 @@
 This GitHub Actions installs a pre-requisite for "gcloud container clusters get-credentials"
 command with a modern k8s client.
 
-**Note**: This will probably eventually be added to one or more `google-github-actions`. It's
-currently unclear what will be the preferred and best way to add the auth plugin to your workflows,
-so I will be adding a notice/message to users of this action when that is clearer. If you have
-opinions and/or updates, please open an issue 🙌
-
 ## Quickstart
 
 ```yaml
@@ -62,7 +57,9 @@ Assuming this is your current setup using this plugin:
   uses: "google-github-actions/auth@v1"
   with:
     credentials_json: "${{ secrets.GCP_SERVICEACCOUNT_KEY }}"
+
 - uses: simenandre/setup-gke-gcloud-auth-plugin@v1
+
 - name: Authenticate to GKE cluster
   uses: google-github-actions/get-gke-credentials@v1
   with:
@@ -77,9 +74,11 @@ Migrating to get-gke-credentials can be done like so:
   uses: "google-github-actions/auth@v2"
   with:
     credentials_json: "${{ secrets.GCP_SERVICEACCOUNT_KEY }}"
+
 - uses: "google-github-actions/setup-gcloud@v2"
   with:
     install_components: "gke-gcloud-auth-plugin"
+
 - name: Authenticate to GKE cluster
   uses: google-github-actions/get-gke-credentials@v2
   with:
