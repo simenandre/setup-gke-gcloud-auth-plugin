@@ -10,7 +10,7 @@ runs:
     - name: Inform about deprecation
       shell: bash
       run: |
-        echo "::warning::The `setup-gke-gcloud-auth-plugin` action is deprecated. See the README for a migration guide: https://github.com/simenandre/setup-gke-gcloud-auth-plugin"
+        echo "::warning::The setup-gke-gcloud-auth-plugin action is deprecated. See the README for a migration guide: https://github.com/simenandre/setup-gke-gcloud-auth-plugin"
     - name: Install gke-gcloud-auth-plugin
       shell: bash
       run: |
