@@ -7,6 +7,10 @@ branding:
 runs:
   using: composite
   steps:
+    - name: Inform about deprecation
+      shell: bash
+      run: |
+        echo "This action is deprecated. See the readme for a migration guide: https://github.com/simenandre/setup-gke-gcloud-auth-plugin"
     - name: Install gke-gcloud-auth-plugin
       shell: bash
       run: |
